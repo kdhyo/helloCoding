@@ -1,5 +1,5 @@
 function weigthredGraph() {
-    const graph = {};
+    const graph = {}; // 그래프 데이터
     graph['start'] = {};
     graph['start']['a'] = 6;
     graph['start']['b'] = 2;
@@ -13,17 +13,17 @@ function weigthredGraph() {
 
     graph['fin'] = {};
 
-    const costs = {};
+    const costs = {}; // 정점 가격
     costs['a'] = 6;
     costs['b'] = 2;
     costs['fin'] = Infinity;
 
-    const parents = {};
+    const parents = {}; // 정점 위치
     parents['a'] = 'start';
     parents['b'] = 'start';
     parents['fin'] = null;
 
-    const processed = [];
+    const processed = []; // 정점처리 기록
 
     let node = findLowestCostNode(costs);
     while (node !== null) {
