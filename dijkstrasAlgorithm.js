@@ -54,7 +54,7 @@ function weigthredGraph() {
         return lowestCostNode;
     }
 
-    return costs;
+    return { parents, costs };
 }
 
 console.log(weigthredGraph());
